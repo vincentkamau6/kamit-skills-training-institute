@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kamit Skills Training Institute</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; line-height:1.6; }
+
+    /* Header / Home */
+    header {
+      background: url('header-bg.jpg') no-repeat center center/cover;
+      color: white; padding: 60px 20px; text-align: center;
+      position: relative;
+    }
+    header::before {
+      content: '';
+      position: absolute; top:0; left:0; width:100%; height:100%;
+      background: rgba(0,0,0,0.5);
+      z-index:0;
+    }
+    header h1, header p {
+      position: relative; z-index:1;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+
+    /* Navigation */
+    nav {
+      background: rgba(51,51,51,0.9);
+      padding: 10px 0;
+      position: sticky; top:0; z-index:1000;
+    }
+    nav ul { list-style:none; margin:0; padding:0; display:flex; justify-content:center; }
+    nav ul li { position: relative; }
+    nav ul li a {
+      color: #f39c12;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: block;
+      font-weight:bold;
+      text-shadow: 1px 1px 2px #000;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {
+      background: #e67e22;
+      color: white;
+    }
+
+    /* Dropdown */
+    nav ul li ul {
+      display: none; position: absolute; top:100%; left:0;
+      background:#444; min-width:200px; z-index:1000;
+    }
+    nav ul li:hover ul { display:block; }
+    nav ul li ul li a { padding:10px; text-shadow:none; }
+
+    /* Sections */
+    section { padding:60px 20px; position: relative; }
+    h2 { text-align:center; margin-bottom:20px; }
+
+    /* Overlay sections */
+    .overlay-section::before {
+      content:'';
+      position:absolute; top:0; left:0; width:100%; height:100%;
+      background: rgba(0,0,0,0.5);
+      z-index:0;
+    }
+    .overlay-section > div, .overlay-section h2 {
+      position: relative; z-index:1;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+
+    /* Founders */
+    .founders { display:flex; justify-content:center; gap:30px; flex-wrap:wrap; }
+    .founder { text-align:center; width:250px; }
+    .founder img { width:100%; border-radius:10px; }
+
+    /* Courses */
+    .courses { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
+    .course {
+      background:#f4f4f4; padding:20px; border-radius:10px; box-shadow:0 0 5px rgba(0,0,0,0.1);
+    }
+    .course h3 { margin-top:0; color:#2c3e50; }
+    .course ul { list-style:disc inside; margin:0; padding:0; }
+
+    /* Forms */
+    form { max-width:600px; margin:auto; }
+    form input, form select, form textarea {
+      width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:5px;
+    }
+    form button {
+      background:#f39c12; color:white; border:none; padding:12px; border-radius:5px; cursor:pointer;
+      transition:0.3s;
+    }
+    form button:hover { background:#d35400; }
+
+    /* Smooth Scroll */
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Home -->
+  <header id="home">
+    <h1>Kamit Skills Training Institute</h1>
+    <p>Empowering Learners with Market-Driven Skills for a Brighter Future</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li>
+        <a href="#academics">Academics</a>
+        <ul>
+          <li><a href="#student-portal">Student Portal</a></li>
+          <li><a href="#admin-portal">Admin Portal</a></li>
+        </ul>
+      </li>
+      <li><a href="#admission">Admission</a></li>
+      <li><a href="#admission-letter">Admission Letter</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Courses Section -->
+  <section id="courses" style="background:url('courses-bg.jpg') no-repeat center/cover; color:black;">
+    <h2>Courses Offered</h2>
+    <div class="courses">
+
+      <div class="course" id="ict">
+        <h3>School of Computer and ICT</h3>
+        <ul>
+          <li>Computer Packages Training</li>
+          <li>Certificate in ICT</li>
+          <li>Diploma in ICT</li>
+        </ul>
+      </div>
+
+      <div class="course" id="engineering">
+        <h3>School of Engineering and Technical Studies</h3>
+        <ul>
+          <li>Diploma in Electrical and Wiring Installation (Level 1–3)</li>
+          <li>Craft in Electrical and Electronic Installation</li>
+          <li>Artisan in Electrical</li>
+          <li>Plumbing Technician (Certificate / Artisan)</li>
+          <li>Welding and Fabrication</li>
+          <li>Solar Installation Systems</li>
+          <li>Building and Construction</li>
+          <li>Auto Mechanics Engineering</li>
+        </ul>
+      </div>
+
+      <div class="course" id="beauty">
+        <h3>School of Beauty</h3>
+        <ul>
+          <li>Hairdressing and Beauty Therapy (Grade 1–3)</li>
+          <li>Fashion Design and Tailoring</li>
+          <li>Dressmaking (Grade 1–3)</li>
+          <li>Tailoring (Grade 1–3)</li>
+        </ul>
+      </div>
+
+      <div class="course" id="hospitality">
+        <h3>School of Hospitality</h3>
+        <ul>
+          <li>Diploma in Catering and Hospitality (Module 1–3)</li>
+          <li>Certificate in Catering and Hospitality</li>
+        </ul>
+      </div>
+
+      <div class="course" id="business">
+        <h3>School of Business and Enterprise</h3>
+        <ul>
+          <li>Business and Social Enterprise</li>
+          <li>Home Care Nursing</li>
+        </ul>
+      </div>
+
+      <div class="course" id="short">
+        <h3>Short Courses</h3>
+        <ul>
+          <li>Painting</li>
+          <li>Interior Décor</li>
+          <li>Tiles Fixing</li>
+          <li>Defensive Driving</li>
+          <li>Tie and Dye</li>
+          <li>Bread Works</li>
+          <li>Pottery and Ceramics</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Academics Section -->
+  <section id="academics">
+    <h2>Academics</h2>
+    <p style="text-align:center;">Explore our academic resources and portals.</p>
+
+    <div id="student-portal" style="margin:40px 0;">
+      <h3 style="text-align:center;">Student Portal</h3>
+      <form>
+        <input type="text" placeholder="Student ID" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+    <div id="admin-portal" style="margin:40px 0;">
+      <h3 style="text-align:center;">Admin Portal</h3>
+      <form>
+        <input type="text" placeholder="Admin ID" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Admission Section -->
+  <section id="admission" style="background:#eee;">
+    <h2>Online Admission Form</h2>
+    <form action="https://formspree.io/f/yourFormID" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="_replyto" placeholder="Email" required>
+      <input type="text" name="phone" placeholder="Phone Number" required>
+      <select name="course" required>
+        <option value="">-- Select a Course --</option>
+        <option>ICT</option>
+        <option>Electrical & Wiring Installation</option>
+        <option>Plumbing Engineering</option>
+        <option>Welding and Fabrication</option>
+        <option>Hospitality & Catering</option>
+        <option>Business & Social Enterprise</option>
+        <option>Beauty Therapy & Fashion Design</option>
+        <option>Auto Mechanics Engineering</option>
+        <option>Short Courses</option>
+      </select>
+      <select name="level" required>
+        <option value="">-- Select Level --</option>
+        <option>Certificate</option>
+        <option>Diploma</option>
+        <option>Artisan</option>
+        <option>Short Course</option>
+      </select>
+      <textarea name="message" placeholder="Additional Message"></textarea>
+      <button type="submit">Submit Application</button>
+    </form>
+  </section>
+
+  <!-- Admission Letter Section -->
+  <section id="admission-letter" style="padding:60px; background:#f4f4f4; text-align:center;">
+    <h2>Admission Letter</h2>
+    <p>You can view your official admission letter below. Open it in a new tab and print or save it.</p>
+    <a href="admission-letter.pdf" target="_blank"
+       style="display:inline-block; background:#3498db; color:white; padding:12px 25px;
+              text-decoration:none; font-size:18px; border-radius:6px; transition:0.3s;">
+       📄 View Admission Letter
+    </a>
+  </section>
+
+  <!-- About Section moved here -->
+  <section id="about" class="overlay-section" style="background:url('about-bg.jpg') no-repeat center/cover; color:white;">
+    <h2>About Kamit Institute</h2>
+    <div style="max-width:800px; margin:auto; background:rgba(0,0,0,0.6); padding:20px; border-radius:10px;">
+      <p>
+        Mission: To equip learners with market-driven skills through quality, hands-on training that empowers them to succeed in today’s workforce and build a brighter future.
+      </p>
+    </div>
+    <h3 style="margin-top:40px; text-align:center;">Our Founders</h3>
+    <div class="founders">
+      <div class="founder">
+        <img src="founder1.png" alt="Founder 1">
+        <h4>Rev. Nelson Kariuki</h4>
+        <p>Executive Chairman</p>
+      </div>
+      <div class="founder">
+        <img src="founder2.png" alt="Founder 2">
+        <h4>Elder Jefferson Ndichu Kariuki</h4>
+        <p>Deputy National Chairman / CEO</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="overlay-section" style="background:url('contact-bg.jpg') no-repeat center/cover; color:white;">
+    <div style="position:relative; z-index:1; text-align:center; padding:60px 20px;">
+      <h2>Contact Us</h2>
+      <p>📧 kamitinstitute@gmail.com | ☎ 0796905174 / 0721452177</p>
+      <p>📍 Joska, 200m Behind Shell Petrol Station</p>
+    </div>
+  </section>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
